@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>openmolecularsystems.systems.free_particle &mdash; OpenMolecularSystems 0+untagged.1.g6f86897 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> OpenMolecularSystems
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/Installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/free_particle/index.html">Free Particle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/free_particle/Free_Particle.html">Free Particle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/free_particle/Free_Particle.html#Working-with-this-test-system">Working with this test system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/free_particle/Free_Particle.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/free_particle/Free_Particle.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/harmonic_well/index.html">Harmonic Well</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/harmonic_well/Harmonic_Well.html">Harmonic Well Potential</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/harmonic_well/Harmonic_Well.html#Working-with-this-test-system">Working with this test system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/harmonic_well/Harmonic_Well.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/harmonic_well/Harmonic_Well.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/double_well/index.html">Double Well</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/double_well/Double_Well.html">Double Well Potential</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#A-double-well-potential-along-X">A double well potential along <span class="math notranslate nohighlight">\(X\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Symmetric-case-(b=0)">Symmetric case (<span class="math notranslate nohighlight">\(b=0\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Frequency-of-small-oscillations-around-the-minima">Frequency of small oscillations around the minima</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Assymetric-case-(b\neq0)">Assymetric case (<span class="math notranslate nohighlight">\(b\neq0\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Frequency-of-small-oscillations-around-the-minima.">Frequency of small oscillations around the minima.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#An-harmonic-potential-along-Y-and-Z">An harmonic potential along <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(Z\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Working-with-this-test-system">Working with this test system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/double_well/Double_Well.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/lennard_jones_fluid/index.html">Lennard Jones Fluid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/lennard_jones_fluid/LJ_Potential.html">The Lennard-Jones potential</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/lennard_jones_fluid/LJ_Potential.html#The-Lennard-Jones-minimum-and-the-size-of-the-particles">The Lennard Jones minimum and the size of the particles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/lennard_jones_fluid/LJ_Potential.html#Time-period-of-the-small-harmonic-oscillations-around-the-minimum">Time period of the small harmonic oscillations around the minimum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/lennard_jones_fluid/Two_particles.html">Two Lennard-Jones atoms in vacuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/lennard_jones_fluid/Two_particles.html#Working-with-this-test-system">Working with this test system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/lennard_jones_fluid/Two_particles.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../contents/lennard_jones_fluid/Two_particles.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/alanine_dipeptide/index.html">Alanine Dipeptide</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/index.html">Alanine Tetrapeptide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html">Alanine tetrapeptide in vacuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-this-library">With this library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-OpenExplorer">With OpenExplorer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html">Alanine dipeptide in Implicit Solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html">Alanine dipeptide in explicit solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contents/alanine_pentapeptide/index.html">Alanine Pentapeptide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html">Alanine dipeptide in vacuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-this-library">With this library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-OpenExplorer">With OpenExplorer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html">Alanine dipeptide in Implicit Solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html">Alanine dipeptide in explicit solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contents/alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">OpenMolecularSystems</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>openmolecularsystems.systems.free_particle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for openmolecularsystems.systems.free_particle</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.openmolecularsystem</span> <span class="kn">import</span> <span class="n">OpenMolecularSystem</span>
+<span class="kn">import</span> <span class="nn">simtk.unit</span> <span class="k">as</span> <span class="nn">unit</span>
+<span class="kn">import</span> <span class="nn">simtk.openmm</span> <span class="k">as</span> <span class="nn">mm</span>
+<span class="kn">import</span> <span class="nn">simtk.openmm.app</span> <span class="k">as</span> <span class="nn">app</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="FreeParticle"><a class="viewcode-back" href="../../../autosummary/openmolecularsystems.FreeParticle.html#openmolecularsystems.FreeParticle">[docs]</a><span class="k">class</span> <span class="nc">FreeParticle</span><span class="p">(</span><span class="n">OpenMolecularSystem</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;Free particles</span>
+
+<span class="sd">    Free particles test system</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    parameters :</span>
+<span class="sd">        Dictionary with parameters to initializate the molecular system</span>
+<span class="sd">    topology : openmm.topology</span>
+<span class="sd">        Openmm topology</span>
+<span class="sd">    coordinates :</span>
+<span class="sd">        Position of particles</span>
+<span class="sd">    system : openmm.system</span>
+<span class="sd">        Openmm system</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FreeParticle.__init__"><a class="viewcode-back" href="../../../autosummary/openmolecularsystems.FreeParticle.html#openmolecularsystems.FreeParticle.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_particles</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mass</span><span class="o">=</span><span class="mi">16</span><span class="o">*</span><span class="n">unit</span><span class="o">.</span><span class="n">amus</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">coordinates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pbc</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;Creating a new instance of FreeParticle</span>
+
+<span class="sd">        A new test system is returned with the openmm system of particles behaving freely -no</span>
+<span class="sd">        potential external potential-.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        n_particles: int</span>
+<span class="sd">            Number of particles in the system</span>
+<span class="sd">        mass: unit.Quantity</span>
+<span class="sd">            Mass of the particles (in unites of mass) # mass of CH4</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+
+<span class="sd">        &gt;&gt;&gt; from uibcdf_test_systems import FreeParticle</span>
+<span class="sd">        &gt;&gt;&gt; from simtk import unit</span>
+<span class="sd">        &gt;&gt;&gt; free_particle = FreeParticle(n_particles=1, mass=16*unit.amu)</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+
+<span class="sd">        See `the free particle documentation in the user guide section</span>
+<span class="sd">        &lt;../../systems/free_particle.html&gt;`_.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="c1"># Parameters</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;n_particles&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">n_particles</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;mass&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">mass</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">density</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="n">pbc</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;pbc&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pbc</span>
+
+        <span class="k">if</span> <span class="n">pbc</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">box</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">density</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Either the &quot;box&quot; input argument or the &quot;density&quot; needs to beed provided.&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">density</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># box initialization upon density</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+        <span class="c1"># OpenMM topology</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">topology</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">Topology</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dummy_element</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">get_by_symbol</span><span class="p">(</span><span class="s1">&#39;DUM&#39;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">dummy_element</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;DUM&#39;</span><span class="p">,</span> <span class="s1">&#39;DUM&#39;</span><span class="p">,</span> <span class="mf">0.0</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">amu</span><span class="p">)</span>
+
+        <span class="n">chain</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">addChain</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_particles</span><span class="p">):</span>
+            <span class="n">residue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">addResidue</span><span class="p">(</span><span class="s1">&#39;DUM&#39;</span><span class="p">,</span> <span class="n">chain</span><span class="p">)</span>
+            <span class="n">atom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">addAtom</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;DUM&#39;</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span> <span class="n">dummy_element</span><span class="p">,</span> <span class="n">residue</span><span class="o">=</span><span class="n">residue</span><span class="p">)</span>
+
+        <span class="c1"># OpenMM system</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_particles</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">addParticle</span><span class="p">(</span><span class="n">mass</span><span class="p">)</span>
+
+        <span class="c1"># Coordinates</span>
+
+        <span class="k">if</span> <span class="n">coordinates</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">coordinates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;n_particles&#39;</span><span class="p">],</span> <span class="mi">3</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">nanometers</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_coordinates</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+
+
+        <span class="c1"># Box</span>
+
+        <span class="k">if</span> <span class="n">pbc</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_box</span><span class="p">(</span><span class="n">box</span><span class="p">)</span></div></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, UIBCDF Lab at the Mexico City Childrens Hospital Federico Gomez and authors.Project structure based on the Computational Molecular Science Python Cookiecutter version 1.5.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,875 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3D Liquid Argon model &mdash; OpenMolecularSystems 0+untagged.1.g6f86897 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> OpenMolecularSystems
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Molecular Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../free_particle/index.html">Free Particle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../free_particle/Free_Particle.html">Free Particle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../free_particle/Free_Particle.html#Working-with-this-test-system">Working with this test system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../free_particle/Free_Particle.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../free_particle/Free_Particle.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../harmonic_well/index.html">Harmonic Well</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../harmonic_well/Harmonic_Well.html">Harmonic Well Potential</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../harmonic_well/Harmonic_Well.html#Working-with-this-test-system">Working with this test system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../harmonic_well/Harmonic_Well.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../harmonic_well/Harmonic_Well.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../double_well/index.html">Double Well</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../double_well/Double_Well.html">Double Well Potential</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../double_well/Double_Well.html#A-double-well-potential-along-X">A double well potential along <span class="math notranslate nohighlight">\(X\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../double_well/Double_Well.html#Symmetric-case-(b=0)">Symmetric case (<span class="math notranslate nohighlight">\(b=0\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../double_well/Double_Well.html#Frequency-of-small-oscillations-around-the-minima">Frequency of small oscillations around the minima</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../double_well/Double_Well.html#Assymetric-case-(b\neq0)">Assymetric case (<span class="math notranslate nohighlight">\(b\neq0\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../double_well/Double_Well.html#Frequency-of-small-oscillations-around-the-minima.">Frequency of small oscillations around the minima.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../double_well/Double_Well.html#An-harmonic-potential-along-Y-and-Z">An harmonic potential along <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(Z\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../double_well/Double_Well.html#Working-with-this-test-system">Working with this test system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../double_well/Double_Well.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../double_well/Double_Well.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Lennard Jones Fluid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LJ_Potential.html">The Lennard-Jones potential</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LJ_Potential.html#The-Lennard-Jones-minimum-and-the-size-of-the-particles">The Lennard Jones minimum and the size of the particles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LJ_Potential.html#Time-period-of-the-small-harmonic-oscillations-around-the-minimum">Time period of the small harmonic oscillations around the minimum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Two_particles.html">Two Lennard-Jones atoms in vacuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Two_particles.html#Working-with-this-test-system">Working with this test system</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Two_particles.html#Newtonian-dynamics">Newtonian dynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Two_particles.html#Stochastic-Dynamics">Stochastic Dynamics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../alanine_dipeptide/index.html">Alanine Dipeptide</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../alanine_tetrapeptide/index.html">Alanine Tetrapeptide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html">Alanine tetrapeptide in vacuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-this-library">With this library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Vacuum.html#With-OpenExplorer">With OpenExplorer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html">Alanine dipeptide in Implicit Solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Implicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html">Alanine dipeptide in explicit solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_tetrapeptide/Alanine_Tetrapeptide_Explicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../alanine_pentapeptide/index.html">Alanine Pentapeptide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html">Alanine dipeptide in vacuum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-this-library">With this library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Vacuum.html#With-OpenExplorer">With OpenExplorer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html">Alanine dipeptide in Implicit Solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Implicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html">Alanine dipeptide in explicit solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html#With-OpenMM-from-scratch">With OpenMM from scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html#With-MolSysMT">With MolSysMT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../alanine_pentapeptide/Alanine_Pentapeptide_Explicit_Solvent.html#With-this-library">With this library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OpenMolecularSystems</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>3D Liquid Argon model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/contents/lennard_jones_fluid/Argon_3D_LJ_fluid.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+<span class="kn">import</span> <span class="nn">simtk.unit</span> <span class="k">as</span> <span class="nn">unit</span>
+<span class="kn">from</span> <span class="nn">simtk</span> <span class="kn">import</span> <span class="n">openmm</span> <span class="k">as</span> <span class="n">mm</span>
+<span class="kn">from</span> <span class="nn">simtk.openmm</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">import</span> <span class="nn">skopt</span> <span class="k">as</span> <span class="nn">skopt</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="3D-Liquid-Argon-model">
+<h1>3D Liquid Argon model<a class="headerlink" href="#3D-Liquid-Argon-model" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mass</span> <span class="o">=</span> <span class="mf">39.948</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">amu</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">3.404</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">angstroms</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.238</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">kilocalories_per_mole</span>
+<span class="n">charge</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">elementary_charge</span>
+
+<span class="n">n_particles</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">reduced_density</span> <span class="o">=</span> <span class="mf">0.85</span>
+<span class="n">l_box</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># 40.0 * unit.angstroms</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">temperature</span> <span class="o">=</span> <span class="mf">300.00</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">kelvin</span>
+<span class="n">integration_timestep</span> <span class="o">=</span> <span class="mf">0.002</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">picoseconds</span>
+<span class="n">collisions_rate</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">unit</span><span class="o">.</span><span class="n">picoseconds</span>
+
+<span class="n">equilibration_time</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">nanoseconds</span>
+<span class="n">production_time</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">nanoseconds</span>
+<span class="n">saving_time</span> <span class="o">=</span> <span class="mf">20.0</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">picoseconds</span>
+
+<span class="n">equilibration_n_steps</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">equilibration_time</span><span class="o">/</span><span class="n">integration_timestep</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">radius</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">6.0</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span>
+
+<span class="k">if</span> <span class="n">l_box</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">volume_particles</span> <span class="o">=</span> <span class="n">n_particles</span><span class="o">*</span><span class="p">(</span><span class="mf">4.0</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="n">volume_particles</span><span class="o">/</span><span class="n">reduced_density</span>
+    <span class="n">l_box</span> <span class="o">=</span> <span class="n">volume</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Side of the box: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l_box</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">volume_particles</span> <span class="o">=</span> <span class="n">n_particles</span><span class="o">*</span><span class="p">(</span><span class="mf">4.0</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">volume</span> <span class="o">=</span> <span class="n">l_box</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">reduced_density</span> <span class="o">=</span> <span class="n">volume_particles</span><span class="o">/</span><span class="n">volume</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reduced density: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reduced_density</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Side of the box: 32.51031041310817 A
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">space</span> <span class="o">=</span> <span class="n">skopt</span><span class="o">.</span><span class="n">Space</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">l_box</span><span class="o">.</span><span class="n">_value</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">l_box</span><span class="o">.</span><span class="n">_value</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">l_box</span><span class="o">.</span><span class="n">_value</span><span class="p">]])</span>
+<span class="n">generator</span> <span class="o">=</span> <span class="n">skopt</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">Lhs</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;maximin&quot;</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">positions_3d</span> <span class="o">=</span> <span class="n">generator</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">space</span><span class="o">.</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">n_particles</span><span class="p">)</span>
+<span class="n">positions_3d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">positions_3d</span><span class="p">)</span><span class="o">*</span><span class="n">unit</span><span class="o">.</span><span class="n">angstroms</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">angstroms</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">angstroms</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">angstroms</span>
+
+<span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">l_box</span>
+<span class="n">v2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">l_box</span>
+<span class="n">v3</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">l_box</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">setDefaultPeriodicBoxVectors</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">non_bonded_force</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">NonbondedForce</span><span class="p">()</span>
+<span class="n">non_bonded_force</span><span class="o">.</span><span class="n">setNonbondedMethod</span><span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">NonbondedForce</span><span class="o">.</span><span class="n">CutoffPeriodic</span><span class="p">)</span>
+<span class="n">non_bonded_force</span><span class="o">.</span><span class="n">setCutoffDistance</span><span class="p">(</span><span class="mf">3.0</span><span class="o">*</span><span class="n">sigma</span><span class="p">)</span>
+<span class="n">non_bonded_force</span><span class="o">.</span><span class="n">setUseSwitchingFunction</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">non_bonded_force</span><span class="o">.</span><span class="n">setSwitchingDistance</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">sigma</span><span class="p">)</span>
+<span class="n">non_bonded_force</span><span class="o">.</span><span class="n">setUseDispersionCorrection</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_particles</span><span class="p">):</span>
+    <span class="n">system</span><span class="o">.</span><span class="n">addParticle</span><span class="p">(</span><span class="n">mass</span><span class="p">)</span>
+    <span class="n">non_bonded_force</span><span class="o">.</span><span class="n">addParticle</span><span class="p">(</span><span class="n">charge</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">_</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">addForce</span><span class="p">(</span><span class="n">non_bonded_force</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">integrator</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">LangevinIntegrator</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">collisions_rate</span><span class="p">,</span> <span class="n">integration_timestep</span><span class="p">)</span>
+<span class="n">platform</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Platform</span><span class="o">.</span><span class="n">getPlatformByName</span><span class="p">(</span><span class="s1">&#39;CUDA&#39;</span><span class="p">)</span>
+<span class="n">context</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Context</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">integrator</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">context</span><span class="o">.</span><span class="n">setPositions</span><span class="p">(</span><span class="n">initial_positions</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">setVelocitiesToTemperature</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">state</span><span class="o">=</span><span class="n">context</span><span class="o">.</span><span class="n">getState</span><span class="p">(</span><span class="n">getEnergy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Before minimization: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">getPotentialEnergy</span><span class="p">()))</span>
+<span class="n">mm</span><span class="o">.</span><span class="n">LocalEnergyMinimizer_minimize</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<span class="n">state</span><span class="o">=</span><span class="n">context</span><span class="o">.</span><span class="n">getState</span><span class="p">(</span><span class="n">getEnergy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After minimization: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">getPotentialEnergy</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">equilibration_n_steps</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">equilibration_time</span><span class="o">/</span><span class="n">integration_timestep</span><span class="p">)</span>
+<span class="n">integrator</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">equilibration_n_steps</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">setTime</span><span class="p">(</span><span class="mf">0.0</span><span class="o">*</span><span class="n">unit</span><span class="o">.</span><span class="n">picoseconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">production_n_steps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">production_time</span><span class="o">/</span><span class="n">integration_timestep</span><span class="p">)</span>
+<span class="n">saving_n_steps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">saving_time</span><span class="o">/</span><span class="n">integration_timestep</span><span class="p">)</span>
+<span class="n">n_saving_periods</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">production_n_steps</span><span class="o">/</span><span class="n">saving_n_steps</span><span class="p">)</span>
+
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n_saving_periods</span><span class="p">])</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">nanoseconds</span>
+<span class="n">trajectory</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n_saving_periods</span><span class="p">,</span> <span class="n">n_particles</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">angstroms</span>
+<span class="n">potential_energy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n_saving_periods</span><span class="p">])</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">kilocalories_per_mole</span>
+
+<span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_saving_periods</span><span class="p">)):</span>
+    <span class="n">integrator</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">saving_n_steps</span><span class="p">)</span>
+    <span class="c1">#remove enforcePeriodicBox to get unwrapped trajectories</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">getState</span><span class="p">(</span><span class="n">getPositions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">getEnergy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">enforcePeriodicBox</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">time</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">getTime</span><span class="p">()</span>
+    <span class="n">trajectory</span><span class="p">[</span><span class="n">ii</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">getPositions</span><span class="p">(</span><span class="n">asNumpy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">potential_energy</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">getPotentialEnergy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">trajectory_mem</span> <span class="o">=</span> <span class="n">trajectory</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="n">trajectory</span><span class="o">.</span><span class="n">itemsize</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">bytes</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Trajectory size: </span><span class="si">{}</span><span class="s1"> MB&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trajectory_mem</span><span class="o">.</span><span class="n">_value</span><span class="o">/</span><span class="p">(</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">trajectory</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">trajectory</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">trajectory</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">trajectory</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">trajectory</span><span class="p">[:,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">trajectory</span><span class="p">[:,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">trajectory</span><span class="p">[:,</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Calcular difusion de las partículas</p></li>
+<li><p>Calcular RDF</p></li>
+<li><p>Energy</p></li>
+<li><p>Sensibilidad frente a integration_timestep</p></li>
+<li><p>Cuando converge</p></li>
+<li><p>Empezar con una grid (muy fuera del equilibrio)… cuando tengo una estructura más equilibrada?</p></li>
+<li><p>Empezar con otro tipo de distribución aleatoria o quasi-aleatoria y ver si converge más rapidamente.</p></li>
+<li><p>Aplicar barostato</p></li>
+<li><p>Cambiar el integrador, de langevin a verlet por ejemplo, la termodinámica converge antes?</p></li>
+<li><p>Sacar magnitudes de equilibrio haciendo montecarlo</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, UIBCDF Lab at the Mexico City Childrens Hospital Federico Gomez and authors.Project structure based on the Computational Molecular Science Python Cookiecutter version 1.5.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
